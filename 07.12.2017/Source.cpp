@@ -102,15 +102,126 @@ start:
 				break;
 			}
 		}
-		/*{
-			int b = a % 7;
-			switch (b)
-	case 0:
+		
+	}
+
+	case 3:
+	{
+		/*3.	Дано трехзначное число.Определить:
+		a.является ли сумма его цифр двухзначным числом;
+		b.является ли произведение его цифр трехзначным числом*/
+		int n, t;
+		system("cls");
+		cout << "Введите трёх значное число = ";
+		cin >> n;
+		if ((n >= 100) && (n <= 999))
+		{
+		t= (n / 100) * (n / 10 * 10) * (n * 10);
+			cout << "является произведением чисел "<<t << endl;
+		}
+		else if ((t >= 100) && (t <= 999));
+		{
+			cout << "Сумма двузначна  " << endl;
+		}
+		break;
+	}
+	case 5:
+	{
+		/* Написать программу, которая при вводе числа в диапазоне от 1 до 20 добавляет к нему слово "рубль" в правильной форме. Например, 1 рубль, 2 рубля, 5 рублей */
+		cout << "Введите число от 1 до 20 : ";
+		int a;
+		cin >> a;
+		
+		
+			switch (a)
 			{
+			case 1:
+
+				cout << a << " рубль" << endl;
+				break;
+
+			case 2:
+			case 3:
+			case 4:
+
+				cout << a << " рубля" << endl;
+				break;
+
+			case 5:
+			case 6:
+			case 7:
+			case 8:
+			case 9:
+			case 10:
+			case 11:
+			case 12:
+			case 13:
+			case 14:
+			case 15:
+			case 16:
+			case 17:
+			case 18:
+			case 19:
+			case 20:
+
+				cout << a << " рублей" << endl;
+				break;
+
 			default:
+				cout << "Вы ввели не правильное число" << endl;
 				break;
 			}
-		}*/
+
+		
+			/*if (a == 1)
+				cout << a << " рубль" << endl;
+			else if (2 < a && 4 < a)
+				cout << a << " рубля" << endl;
+			else if ((4 < a) && (a < 20))
+				cout << a << " рублей" << endl;
+			else
+				cout << "Вы ввели не правильное число" << endl;*/
+		
+		break;
+	}
+	case 6:
+	{
+		int a;
+		cout << "Введите число от 1 до 31 : ";
+		cin >> a;
+		int l = 28;
+		int pp = 27;
+		int sp = 1 + pp - 31;
+		int sn = 1 + pp - 31 + 1;
+		int ssp = sp + l - 31;
+		int ossp = 31 - a + ssp;
+
+		if (1 < a&&a < 24)
+		{
+			int op = a - sp;
+			int on = a - sn;
+			cout << "Осталось до полнолуния " << op << endl;
+			cout << "Осталось до новолуния " << on << endl;
+		}
+		else if (a == 24)
+		{
+			int on = a - sn;
+			cout << "Сегодня полнолуние "<< endl;
+			cout << "До новолуния " << on<< endl;
+		}
+		else if (a >= 25)
+		{
+			cout << "Сегодня новолуние " << endl;
+			cout << "До полнолуния " <<ossp<< endl;
+		}
+		else if (a > 25 && a < 31)
+		{
+			int ossn = ossp + 1;
+			cout << "Осталось до полнолуния " << ossp << endl;
+			cout << "Осталось до новолуния " << ossn << endl;
+		}
+
+		break;
 	}
 
 	default:
